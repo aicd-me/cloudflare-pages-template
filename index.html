@@ -1,117 +1,558 @@
-<!doctype html>
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
-	<!-- Metadata -->
-    <meta charset="utf-8">
-    <meta name="keywords" content="cloudflare, pages, template, edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
-	<meta name="robots" content="index, follow">
-	<title>Home | Cloudflare Pages web template</title>
-    <link rel="shortcut icon" type="image/png" href="favicon.png">
-	<!-- Metadata END -->
-    
-	<!-- Stylesheets -->
-	<link rel="stylesheet" type="text/css" href="./css/bootstrap.min.css?1563">
-	<link rel="stylesheet" type="text/css" href="style.css?2909">
-	<link rel="stylesheet" type="text/css" href="./css/animate.min.css?7190">
-	<link rel="stylesheet" type="text/css" href="./css/all.min.css">
-	<!-- Stylesheets END -->
-
-	<!-- Here HTMLRewriter will write the Metadata from _middleware.js -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI Life OS - Your Personal Life Operating System</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .gradient-bg {
+            background: linear-gradient(120deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+        .gradient-text {
+            background: linear-gradient(120deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-hover:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+        }
+        .feature-card {
+            transition: all 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-10px);
+        }
+        .btn-primary {
+            background: linear-gradient(120deg, #4158D0 0%, #C850C0 100%);
+            transition: all 0.3s ease;
+        }
+        .btn-primary:hover {
+            opacity: 0.9;
+            transform: translateY(-2px);
+            box-shadow: 0 7px 14px rgba(65, 88, 208, 0.3);
+        }
+        .testimonial-card {
+            transition: all 0.3s ease;
+        }
+        .testimonial-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+        .brain-bg {
+            background: url('https://cdn.jsdelivr.net/gh/yourusername/assets/brain-pattern.svg');
+            background-size: cover;
+            background-position: center;
+        }
+        .pricing-card {
+            transition: all 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.1);
+        }
+        .blob {
+            position: absolute;
+            z-index: -1;
+            opacity: 0.6;
+            filter: blur(40px);
+        }
+        .pulse-animation {
+            animation: pulse 2s infinite;
+        }
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+            50% {
+                transform: scale(1.05);
+                opacity: 1;
+            }
+            100% {
+                transform: scale(1);
+                opacity: 0.8;
+            }
+        }
+    </style>
 </head>
-<body>
+<body class="bg-gray-50 text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md py-4 fixed w-full z-50">
+        <div class="container mx-auto px-6 flex justify-between items-center">
+            <div class="flex items-center">
+                <span class="text-2xl font-bold gradient-text">AI Life OS</span>
+            </div>
+            <div class="hidden md:flex space-x-8 text-gray-700">
+                <a href="#features" class="hover:text-purple-600 transition-colors">Features</a>
+                <a href="#why" class="hover:text-purple-600 transition-colors">Why It's Revolutionary</a>
+                <a href="#testimonials" class="hover:text-purple-600 transition-colors">Testimonials</a>
+                <a href="#pricing" class="hover:text-purple-600 transition-colors">Early Access</a>
+            </div>
+            <a href="#early-access" class="btn-primary text-white font-medium py-2 px-6 rounded-full shadow-lg hidden md:block">
+                Join Waitlist
+            </a>
+        </div>
+    </nav>
 
-<!-- Preloader -->
-<div id="page-loading-blocs-notifaction" class="page-preloader"></div>
-<!-- Preloader END -->
+    <!-- Hero Section -->
+    <div class="pt-32 pb-20 px-6 relative overflow-hidden">
+        <div class="blob bg-blue-400 w-96 h-96 top-0 right-0 rounded-full"></div>
+        <div class="blob bg-purple-400 w-96 h-96 bottom-0 left-0 rounded-full"></div>
+        <div class="container mx-auto text-center relative z-10">
+            <h1 class="text-5xl md:text-6xl font-extrabold mb-6 leading-tight">
+                <span class="gradient-text">One Mind</span> for Every Human
+            </h1>
+            <p class="text-xl md:text-2xl font-light text-gray-600 mb-10 max-w-3xl mx-auto">
+                Your personal AI that seamlessly manages your entire life — understanding your goals, habits, health, finances, work, and relationships in one place.
+            </p>
+            <div class="flex flex-col md:flex-row justify-center gap-4 mb-16">
+                <a href="#early-access" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg shadow-xl">
+                    Join the Waitlist
+                </a>
+                <a href="#learn-more" class="bg-white text-gray-700 border-2 border-gray-200 font-bold py-4 px-10 rounded-full text-lg hover:border-purple-400 transition-all">
+                    Learn More
+                </a>
+            </div>
+            <div class="relative max-w-4xl mx-auto pulse-animation">
+                <div class="rounded-2xl shadow-2xl overflow-hidden border-4 border-white">
+                    <img src="https://cdn.jsdelivr.net/gh/midjourney/assets@main/ai-dashboard.jpg" alt="AI Life OS Dashboard" class="w-full">
+                </div>
+                <div class="absolute -bottom-6 left-1/2 transform -translate-x-1/2 bg-white px-8 py-3 rounded-full shadow-lg">
+                    <p class="font-semibold text-gray-700">Private. Decentralized. <span class="text-purple-600">Yours.</span></p>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <!-- Problem Statement -->
+    <div id="learn-more" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold mb-4">Life is <span class="gradient-text">Complex</span>. It Shouldn't Be.</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">We're overwhelmed with apps, tabs, decisions, and digital clutter. Human bandwidth is limited.</p>
+            </div>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-10 max-w-5xl mx-auto">
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover transition-all">
+                    <div class="w-14 h-14 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-brain text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Cognitive Overload</h3>
+                    <p class="text-gray-600">The average person uses 10+ apps daily and makes 35,000 decisions. Our minds weren't designed for this.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover transition-all">
+                    <div class="w-14 h-14 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-lock text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Platform Lock-in</h3>
+                    <p class="text-gray-600">Tech giants trap you in their ecosystems, owning your data and limiting your freedom.</p>
+                </div>
+                <div class="bg-white rounded-xl p-6 shadow-lg card-hover transition-all">
+                    <div class="w-14 h-14 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-hourglass-half text-2xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-xl font-bold mb-3">Time Fragmentation</h3>
+                    <p class="text-gray-600">We spend 4+ hours switching between tools and contexts, losing our most precious resource: time.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- Main container -->
-<div class="page-container">
-    
-<!-- bloc-0 -->
-<div class="bloc bloc-fill-screen l-bloc " id="bloc-0">
-	<div class="container fill-bloc-top-edge">
-		<div class="row">
-			<div class="col-12">
-				<nav class="navbar navbar-light row navbar-expand-md" role="navigation">
-					<div class="container-fluid ">
-						<a class="navbar-brand" href="index.html">Welcome.</a>
-						<button id="nav-toggle" type="button" class="ui-navbar-toggler navbar-toggler border-0 p-0 ms-auto me-md-0" aria-expanded="false" aria-label="Toggle navigation" data-bs-toggle="collapse" data-bs-target=".navbar-35092">
-							<span class="navbar-toggler-icon"></span>
-						</button>
-						<div class="collapse navbar-collapse navbar-120 navbar-29706 navbar-45188 navbar-18426 navbar-42371 navbar-35092">
-							<ul class="site-navigation nav navbar-nav ms-auto">
-								<li class="nav-item">
-									<a href="index.html" class="nav-link a-btn">Home</a>
-								</li>
-							</ul>
-						</div>
-					</div>
-				</nav>
-			</div>
-		</div>
-	</div>
-	<div class="container">
-		<div class="row">
-			<div class="col">
-				<h1 class="text-center mg-clear hero-header-text text-blue-gradient">
-					Welcome.<br>
-				</h1>
-				<h3 class="mg-md float-none text-center hero-subheader tc-black">
-					This is a template to get started with <a href="https://pages.cloudflare.com/" rel="nofollow noopener noreferrer" target="_blank">Cloudflare Pages</a>.
-				</h3>
-			</div>
-		</div>
-	</div>
-	<div class="container fill-bloc-bottom-edge">
-		<div class="row">
-			<div class="col-12">
-				<div class="text-center">
-					<a href="#" data-scroll-speed="1000" onclick="scrollToTarget('0',this)"><span class="fa fa-angle-down icon-md animated bounce animDelay08"></span></a>
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-0 END -->
+    <!-- Solution Statement -->
+    <div class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Introducing Your AI Life Operating System</h2>
+                <p class="text-xl mb-10">A second brain trained on your entire life context — your thoughts, goals, values, work, health, memories, schedule, relationships, and history — running seamlessly across every device and application you use.</p>
+                <div class="bg-white/10 backdrop-blur-md rounded-2xl p-6 border border-white/20">
+                    <p class="text-2xl font-bold mb-4">The twist? <span class="text-yellow-300">You own it.</span></p>
+                    <p class="text-lg">Fully private, decentralized, and portable. No data mining. No ads. Just you and your AI partner working together.</p>
+                </div>
+            </div>
+        </div>
+    </div>
 
-<!-- bloc-1 -->
-<div class="bloc l-bloc" id="bloc-1">
-	<div class="container bloc-lg">
-		<div class="row">
-			<div class="col-lg-12 hero-first-col-mb">
-				<h1 class="mg-md text-center">
-					The Cloudflare Network
-				</h1>
-				<div class="text-center">
-					<a href="https://www.cloudflare.com/network/" class="btn btn-lg btn-rd btn-portland-orange" rel="nofollow noopener noreferrer" target="_blank">Explore</a>
-				</div>
-			</div>
-			<div class="offset-md-2 col-md-8 col-lg-8 offset-lg-2">
-				<div class="mx-auto d-block blocsapp-device blocsapp-device-mb mb-space-grey">
-					<img src="img/lazyload-ph.png" data-src="img/cloudflare-network.png" class="img-fluid lazyload" alt="cloudflare network" />
-				</div>
-			</div>
-		</div>
-	</div>
-</div>
-<!-- bloc-1 END -->
+    <!-- Features -->
+    <div id="features" class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-20">
+                <h2 class="text-4xl font-bold mb-4">Features That <span class="gradient-text">Transform</span> Your Life</h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">It doesn't just respond to commands — it thinks with you, understands you, and evolves with you.</p>
+            </div>
 
-<!-- ScrollToTop Button -->
-<a class="bloc-button btn btn-d scrollToTop" onclick="scrollToTarget('1',this)"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 32 32"><path class="scroll-to-top-btn-icon" d="M30,22.656l-14-13-14,13"/></svg></a>
-<!-- ScrollToTop Button END-->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Feature 1 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-robot text-2xl text-blue-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Autonomous Task Agents</h3>
+                    <p class="text-gray-600">Simply say "File my taxes" or "Book a trip with vegan food and no heat" and your AI executes complex tasks on your behalf.</p>
+                </div>
 
+                <!-- Feature 2 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-purple-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-heart text-2xl text-purple-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Emotional AI</h3>
+                    <p class="text-gray-600">Tracks your emotional patterns and adapts its behavior like a friend, coach, or therapist depending on what you need.</p>
+                </div>
 
-</div>
-<!-- Main container END -->
-    
+                <!-- Feature 3 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-pink-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-globe text-2xl text-pink-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Personalized Web</h3>
+                    <p class="text-gray-600">Filters the entire internet through your values and priorities, showing you what matters and filtering out the noise.</p>
+                </div>
 
+                <!-- Feature 4 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-paint-brush text-2xl text-green-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Co-Creator Mode</h3>
+                    <p class="text-gray-600">Write, build, design, or brainstorm together with your AI that understands your style, preferences, and goals.</p>
+                </div>
 
-<!-- Additional JS -->
-<script src="./js/bootstrap.bundle.min.js?8537"></script>
-<script src="./js/blocs.min.js?4639"></script>
-<script src="./js/lazysizes.min.js" defer></script><!-- Additional JS END -->
+                <!-- Feature 5 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-yellow-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-memory text-2xl text-yellow-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Digital Memory Recall</h3>
+                    <p class="text-gray-600">"What was that book I liked in 2022 with the blue cover?" → instant memory recall that gets better over time.</p>
+                </div>
 
+                <!-- Feature 6 -->
+                <div class="feature-card bg-white rounded-xl p-8 shadow-lg border border-gray-100">
+                    <div class="w-16 h-16 bg-red-100 rounded-full flex items-center justify-center mb-6">
+                        <i class="fas fa-route text-2xl text-red-600"></i>
+                    </div>
+                    <h3 class="text-2xl font-bold mb-3">Real-time Life Planning</h3>
+                    <p class="text-gray-600">Tracks your long-term goals and gently course-corrects you daily, making sure you're always moving forward.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Why It's Revolutionary -->
+    <div id="why" class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Why This Is <span class="text-purple-400">Revolutionary</span></h2>
+                <p class="text-xl text-gray-300 max-w-3xl mx-auto">Not just another AI assistant. A fundamental evolution in human-computer interaction.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-purple-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Platform-Agnostic Freedom</h3>
+                    </div>
+                    <p class="text-gray-300 pl-14">Unlike Google or Apple who trap you in their ecosystems, your AI OS works everywhere, on every device and platform.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-purple-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Proactive Intelligence</h3>
+                    </div>
+                    <p class="text-gray-300 pl-14">It doesn't just respond to commands—it anticipates your needs before you even think of them.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-purple-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">True Digital Coordination</h3>
+                    </div>
+                    <p class="text-gray-300 pl-14">Coordinates your entire digital existence across emails, calendar, shopping, finances, news, job search, health, and relationships.</p>
+                </div>
+
+                <div class="bg-gray-800 rounded-xl p-6 border border-gray-700">
+                    <div class="flex items-start mb-4">
+                        <div class="w-10 h-10 bg-purple-900 rounded-full flex items-center justify-center mr-4">
+                            <i class="fas fa-check text-purple-300"></i>
+                        </div>
+                        <h3 class="text-xl font-bold">Data Sovereignty</h3>
+                    </div>
+                    <p class="text-gray-300 pl-14">You own your data. Not corporations. Complete privacy and control over your digital self.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Testimonials -->
+    <div id="testimonials" class="py-20 bg-gray-50">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">What Early Users Are <span class="gradient-text">Saying</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Discover how AI Life OS is transforming the way people live and work.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="testimonial-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-blue-600 font-bold">SK</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Sarah K.</h4>
+                            <p class="text-gray-500 text-sm">Product Manager</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"I used to juggle 15+ productivity apps. Now I just talk to my AI OS. It's like having a personal executive assistant that knows me better than I know myself."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-green-600 font-bold">JT</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">James T.</h4>
+                            <p class="text-gray-500 text-sm">Entrepreneur</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The autonomous task agents are mind-blowing. My AI negotiated a lower cable bill, booked my travel, and found me the perfect anniversary gift—all while I was sleeping."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+
+                <div class="testimonial-card bg-white rounded-xl p-6 shadow-lg">
+                    <div class="flex items-center mb-4">
+                        <div class="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center mr-4">
+                            <span class="text-purple-600 font-bold">ML</span>
+                        </div>
+                        <div>
+                            <h4 class="font-bold">Maria L.</h4>
+                            <p class="text-gray-500 text-sm">Designer</p>
+                        </div>
+                    </div>
+                    <p class="text-gray-700 mb-4">"The emotional intelligence is what makes this different. It knows when I need motivation, when I need space, and even when I should take a mental health day. It's uncanny."</p>
+                    <div class="flex text-yellow-400">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star-half-alt"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- How It Works -->
+    <div class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">How Your AI Life OS <span class="gradient-text">Works</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">A seamless experience built on revolutionary technology.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-6 max-w-5xl mx-auto">
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">1</div>
+                    <h3 class="text-xl font-bold mb-2">Connect</h3>
+                    <p class="text-gray-600">Securely link your digital accounts and import your personal data.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">2</div>
+                    <h3 class="text-xl font-bold mb-2">Train</h3>
+                    <p class="text-gray-600">Your AI learns your habits, preferences, and patterns over time.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">3</div>
+                    <h3 class="text-xl font-bold mb-2">Delegate</h3>
+                    <p class="text-gray-600">Start delegating simple tasks, then complex ones as trust builds.</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-20 h-20 gradient-bg rounded-full flex items-center justify-center text-white text-2xl font-bold mx-auto mb-4">4</div>
+                    <h3 class="text-xl font-bold mb-2">Evolve</h3>
+                    <p class="text-gray-600">Your AI becomes more helpful and personalized with every interaction.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Early Access Section -->
+    <div id="early-access" class="py-20 gradient-bg text-white">
+        <div class="container mx-auto px-6">
+            <div class="max-w-4xl mx-auto text-center">
+                <h2 class="text-4xl font-bold mb-6">Be Among the First</h2>
+                <p class="text-xl mb-10">Join our exclusive waitlist to be among the first to experience the AI Life Operating System. Early adopters receive lifetime benefits and help shape the future.</p>
+                
+                <div class="bg-white rounded-xl p-8 shadow-xl">
+                    <h3 class="text-2xl font-bold mb-6 text-gray-800">Reserve Your Spot</h3>
+                    <form class="space-y-4">
+                        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                            <input type="text" placeholder="First Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                            <input type="text" placeholder="Last Name" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        </div>
+                        <input type="email" placeholder="Email Address" class="w-full px-4 py-3 rounded-lg border border-gray-300 focus:outline-none focus:ring-2 focus:ring-purple-600">
+                        <div class="flex items-center">
+                            <input type="checkbox" id="early-pioneer" class="mr-2">
+                            <label for="early-pioneer" class="text-gray-700">I want to be an Early Pioneer (first 1,000 users)</label>
+                        </div>
+                        <button type="submit" class="w-full btn-primary text-white font-bold py-4 px-6 rounded-lg text-lg">
+                            Join the Waitlist
+                        </button>
+                        <p class="text-gray-500 text-sm">By joining, you agree to our privacy policy and terms of service.</p>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- FAQ Section -->
+    <div class="py-20 bg-white">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-4xl font-bold mb-4">Frequently Asked <span class="gradient-text">Questions</span></h2>
+                <p class="text-xl text-gray-600 max-w-3xl mx-auto">Everything you need to know about the AI Life Operating System.</p>
+            </div>
+
+            <div class="max-w-3xl mx-auto space-y-6">
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-2">Is my data truly private?</h3>
+                    <p class="text-gray-600">Yes. Your data never leaves your personal secure enclave. The AI runs locally when possible and uses federated learning techniques to protect your privacy.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-2">How is this different from Siri or Alexa?</h3>
+                    <p class="text-gray-600">Siri and Alexa are voice interfaces that execute simple commands. AI Life OS is a cognitive partner that understands context, learns your patterns, works across all platforms, and can perform complex tasks autonomously.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-2">What is the business model if you're not selling my data?</h3>
+                    <p class="text-gray-600">We operate on a subscription model. You pay for the service directly, which means we work for you, not advertisers. Your data remains yours alone.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-2">Can I transfer my AI OS if I switch devices?</h3>
+                    <p class="text-gray-600">Absolutely. Your AI Life OS is platform-agnostic and follows you wherever you go—from Apple to Android, Windows to Mac, and across any new devices you acquire.</p>
+                </div>
+
+                <div class="bg-gray-50 rounded-xl p-6">
+                    <h3 class="text-xl font-bold mb-2">What happens if I want to stop using the service?</h3>
+                    <p class="text-gray-600">You can export all your data and delete your account at any time. We believe in giving users complete control and ownership.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Final CTA -->
+    <div class="py-20 bg-gray-900 text-white">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-4xl font-bold mb-6">Ready to Transform Your Digital Life?</h2>
+            <p class="text-xl mb-10 max-w-3xl mx-auto">Join thousands of forward-thinking individuals reclaiming their cognitive freedom with the AI Life Operating System.</p>
+            <a href="#early-access" class="btn-primary text-white font-bold py-4 px-10 rounded-full text-lg inline-block">
+                Get Started Today
+            </a>
+            <p class="mt-8 text-gray-400">Limited spots available for our first release.</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-300 py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-2xl font-bold gradient-text mb-4">AI Life OS</h3>
+                    <p class="mb-4">Your personal life operating system that thinks with you.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="text-gray-300 hover:text-white"><i class="fab fa-instagram"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Company</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">About Us</a></li>
+                        <li><a href="#" class="hover:text-white">Careers</a></li>
+                        <li><a href="#" class="hover:text-white">Blog</a></li>
+                        <li><a href="#" class="hover:text-white">Press</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Resources</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="hover:text-white">Documentation</a></li>
+                        <li><a href="#" class="hover:text-white">Help Center</a></li>
+                        <li><a href="#" class="hover:text-white">Privacy</a></li>
+                        <li><a href="#" class="hover:text-white">Terms</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Stay Updated</h4>
+                    <p class="mb-4">Subscribe to our newsletter for the latest updates.</p>
+                    <div class="flex">
+                        <input type="email" placeholder="Your email" class="px-4 py-2 rounded-l-lg focus:outline-none text-gray-800">
+                        <button class="bg-purple-600 hover:bg-purple-700 px-4 py-2 rounded-r-lg">Subscribe</button>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-700 mt-12 pt-8 text-center">
+                <p>&copy; 2023 AI Life OS. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        
+        // Add intersection observer for animations
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100', 'translate-y-0');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, { threshold: 0.1 });
+        
+        document.querySelectorAll('.feature-card, .testimonial-card').forEach(card => {
+            card.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(card);
+        });
+    </script>
 </body>
 </html>
